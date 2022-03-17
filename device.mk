@@ -226,6 +226,11 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-service \
     android.hardware.ir@1.0-impl
 
+# Kernel
+TARGET_PREBUILT_KERNEL := device/xiaomi/cannon-kernel/Image.gz-dtb
+PRODUCT_COPY_FILES += \
+    $(TARGET_PREBUILT_KERNEL):kernel
+
 # Keylayouts
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/idc/uinput-fpc.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/uinput-fpc.idc \
