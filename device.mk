@@ -22,6 +22,11 @@ $(call inherit-product, vendor/xiaomi/cannon/cannon-vendor.mk)
 
 PRODUCT_SHIPPING_API_LEVEL := 29
 
+# Host Packages
+PRODUCT_HOST_PACKAGES += \
+    brotli \
+    signapk
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
