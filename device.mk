@@ -20,6 +20,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/cannon/cannon-vendor.mk)
 
+# Include extensions if they exist
+$(call inherit-product-if-exists, vendor/extensions/extensions.mk)
+
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Host Packages
