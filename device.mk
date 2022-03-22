@@ -228,7 +228,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
 
 PRODUCT_PACKAGES += \
-    libshim_vtservice
+    libshim_vtservice \
+    mediatek-ims-override
+
+PRODUCT_BOOT_JARS += \
+    mediatek-ims-override
 
 # IR
 PRODUCT_PACKAGES += \
@@ -346,7 +350,6 @@ PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
     TetheringResOverlay \
     WifiResOverlay
-
 
 # Radio
 PRODUCT_BOOT_JARS += \
