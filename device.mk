@@ -430,6 +430,9 @@ PRODUCT_PACKAGES += \
     libchrome.vendor
 
 # Sensors
+PRODUCT_COPY_FILES += \
+   $(LOCAL_PATH)/configs/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/hals.conf
+
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0.vendor
 
