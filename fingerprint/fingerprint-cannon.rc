@@ -1,0 +1,5 @@
+service vendor.fingerprint-cannon /vendor/bin/hw/android.hardware.biometrics.fingerprint-service.cannon
+    class hal
+    user nobody
+    group nobody
+
