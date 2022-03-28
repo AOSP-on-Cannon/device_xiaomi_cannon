@@ -24,14 +24,14 @@ constexpr size_t MAX_WORKER_QUEUE_SIZE = 5;
 constexpr int SENSOR_ID = 1;
 constexpr common::SensorStrength SENSOR_STRENGTH = common::SensorStrength::STRONG;
 constexpr int MAX_ENROLLMENTS_PER_USER = 5;
-constexpr FingerprintSensorType SENSOR_TYPE = FingerprintSensorType::REAR;
+constexpr FingerprintSensorType SENSOR_TYPE = FingerprintSensorType::POWER_BUTTON;
 constexpr bool SUPPORTS_NAVIGATION_GESTURES = true;
-constexpr char HW_COMPONENT_ID[] = "fingerprintSensor";
-constexpr char HW_VERSION[] = "vendor/model/revision";
-constexpr char FW_VERSION[] = "1.01";
-constexpr char SERIAL_NUMBER[] = "00000001";
-constexpr char SW_COMPONENT_ID[] = "matchingAlgorithm";
-constexpr char SW_VERSION[] = "vendor/version/revision";
+constexpr char HW_COMPONENT_ID[] = "Xiaomi Fingeprint";
+constexpr char HW_VERSION[] = "1";
+constexpr char FW_VERSION[] = "1.02";
+constexpr char SERIAL_NUMBER[] = "0000";
+constexpr char SW_COMPONENT_ID[] = "0000";
+constexpr char SW_VERSION[] = "1";
 
 }  // namespace
 
@@ -48,7 +48,7 @@ ndk::ScopedAStatus Fingerprint::getSensorProps(std::vector<SensorProps>* out) {
                                        componentInfo};
 
     SensorLocation sensorLocation = {0 /* displayId */, 0 /* sensorLocationX */,
-                                     0 /* sensorLocationY */, 0 /* sensorRadius */};
+                                     1030 /* sensorLocationY */, 0 /* sensorRadius */};
 
     *out = {{commonProps,
              SENSOR_TYPE,
