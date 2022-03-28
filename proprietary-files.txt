@@ -1411,7 +1411,6 @@ vendor/bin/fuelgauged
 vendor/bin/fuelgauged_nvram
 vendor/bin/gbe
 vendor/bin/gsm0710muxd
-vendor/bin/hw/mfp-daemon
 vendor/bin/hw/vtservice_hidl
 vendor/bin/ipsec_mon
 vendor/bin/jpegtool
@@ -1460,7 +1459,6 @@ vendor/etc/init/init.cccimdinit.rc
 vendor/etc/init/init.cccirpcd.rc
 vendor/etc/init/init.charge_logger.rc
 vendor/etc/init/init.gps_drv.rc
-vendor/etc/init/init.mfp-daemon.rc
 vendor/etc/init/init.mishow.ctl.rc
 vendor/etc/init/init.vtservice_hidl.rc
 vendor/etc/init/init.wlan_drv.rc
