@@ -1,5 +1,34 @@
 service vendor.fingerprint-cannon /vendor/bin/hw/android.hardware.biometrics.fingerprint-service.cannon
-    class hal
-    user nobody
-    group nobody
+    class late_start
+    user system
+    group system drmrpc diag input uhid
+    writepid /dev/cpuset/foreground/boost/tasks
+    seclabel u:r:hal_fingerprint_default:s0
 
+on init
+    # Goodix fingerprint
+    chmod 0666 /dev/goodix_fp
+    chown system system /dev/goodix_fp
+
+on boot
+    chown system system /sys/bus/platform/devices/fingerprint/clk_enable
+    chmod 0660 /sys/bus/platform/devices/fingerprint/clk_enable
+    chown system system /sys/bus/platform/devices/fingerprint/wakeup_enable
+    chmod 0660 /sys/bus/platform/devices/fingerprint/wakeup_enable
+    chown system system /sys/bus/platform/devices/fingerprint/irq
+    chmod 0660 /sys/bus/platform/devices/fingerprint/irq
+    chown system system /sys/bus/spi/devices/spi5.0/authen_fd/performance
+    chmod 0660 /sys/bus/spi/devices/spi5.0/authen_fd/performance
+    chown system system /sys/class/drm/card0-DSI-1/disp_param
+    chmod 0664 /sys/class/drm/card0-DSI-1/disp_param
+    chown system system /sys/bus/platform/devices/fingerprint/fingerdown_wait
+
+on post-fs-data
+    mkdir /data/vendor/misc 01771 system system
+    mkdir /data/vendor/misc/mi_fp 0770 system system
+    mkdir /persist/mi_fp 0770 system system
+    mkdir /mnt/vendor/persist/mi_fp 0770 system system
+    mkdir /data/vendor/fpc 0770 system system
+    mkdir /data/vendor/fpdump 0770 system system
+    mkdir /data/vendor/goodix 0770 system system
+    mkdir /mnt/vendor/persist/goodix 0770 system system
