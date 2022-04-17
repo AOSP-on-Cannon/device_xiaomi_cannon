@@ -1,3 +1,8 @@
+/*
+ * Copyright (C) 2022 StatiX
+ * SPDX-License-Identifier: GPL-2.0-only
+ */
+
 package com.android.cannonextensions
 
 import android.app.Service
@@ -13,7 +18,7 @@ import android.os.SystemProperties
 import android.os.UserHandle
 import android.provider.Settings.Secure
 
-class DT2WServiceCannon : Service() {
+class DoubleTapService : Service() {
     private var mContext: Context
     private var mHandler: Handler
     private var mCustomSettingsObserver: CustomSettingsObserver
@@ -53,9 +58,5 @@ class DT2WServiceCannon : Service() {
                 update()
             }
         }
-    }
-
-    companion object {
-        private const val TAG = "DT2WServiceCannon"
     }
 }
