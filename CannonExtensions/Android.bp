@@ -16,6 +16,12 @@ android_app {
     platform_apis: true,
     privileged: true,
 
+    defaults: ["SettingsLibDefaults"],
+    static_libs: [
+        "androidx.core_core",
+        "androidx.preference_preference",
+    ],
+
     optimize: {
         enabled: false,
     },

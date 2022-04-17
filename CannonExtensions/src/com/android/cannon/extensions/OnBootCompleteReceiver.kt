@@ -14,6 +14,7 @@ class BootCompletedReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         Log.d(TAG, "Starting")
         DoubleTapUtils.startService(context)
+        DozeUtils.checkDozeService(context)
     }
 
     companion object {
