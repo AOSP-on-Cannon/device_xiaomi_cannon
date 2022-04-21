@@ -30,10 +30,6 @@ PRODUCT_HOST_PACKAGES += \
     brotli \
     signapk
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
-
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
@@ -336,19 +332,24 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/props/device_CN.prop:$(TARGET_COPY_OUT_VENDOR)/etc/device_CN.prop \
     $(LOCAL_PATH)/configs/props/device_GL.prop:$(TARGET_COPY_OUT_VENDOR)/etc/device_GL.prop
 
+# Overlays
+PRODUCT_PACKAGES += \
+    AospWifiResOverlay \
+    CannonAudioOverlay \
+    CannonDisplayOverlay \
+    CannonFrameworksOverlay \
+    CannonSystemUIOverlay \
+    CannonTelephonyFrameworkOverlay \
+    CannonTelephonyOverlay \
+    CarrierConfigOverlay \
+    TetheringResOverlay \
+    WifiResOverlay
+
 # RCS
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
     PresencePolling \
     RcsService
-
-# RRO
-PRODUCT_PACKAGES += \
-    AospWifiResOverlay \
-    CarrierConfigOverlay \
-    TetheringResOverlay \
-    WifiResOverlay
-
 
 # Radio
 PRODUCT_BOOT_JARS += \
