@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2020 The Android Open Source Project
+ *           (C) 2022 StatiXOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +15,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.power-service.pixel.ext-libperfmgr"
+#define LOG_TAG "android.hardware.power-service.cannon.ext-libperfmgr"
 
 #include "PowerExt.h"
 #include "PowerSessionManager.h"
@@ -30,11 +31,11 @@
 #include <utils/Log.h>
 
 namespace aidl {
-namespace google {
+namespace xiaomi {
 namespace hardware {
 namespace power {
 namespace impl {
-namespace pixel {
+namespace cannon {
 
 ndk::ScopedAStatus PowerExt::setMode(const std::string &mode, bool enabled) {
     LOG(DEBUG) << "PowerExt setMode: " << mode << " to: " << enabled;
@@ -77,9 +78,9 @@ ndk::ScopedAStatus PowerExt::isBoostSupported(const std::string &boost, bool *_a
     return ndk::ScopedAStatus::ok();
 }
 
-}  // namespace pixel
+}  // namespace cannon
 }  // namespace impl
 }  // namespace power
 }  // namespace hardware
-}  // namespace google
+}  // namespace xiaomi
 }  // namespace aidl

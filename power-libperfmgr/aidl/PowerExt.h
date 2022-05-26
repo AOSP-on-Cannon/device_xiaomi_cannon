@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2020 The Android Open Source Project
+ *           (C) 2022 StatiXOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,21 +21,21 @@
 #include <memory>
 #include <thread>
 
-#include <aidl/google/hardware/power/extension/pixel/BnPowerExt.h>
+#include <aidl/xiaomi/hardware/power/extension/cannon/BnPowerExt.h>
 #include <perfmgr/HintManager.h>
 
 #include "disp-power/DisplayLowPower.h"
 
 namespace aidl {
-namespace google {
+namespace xiaomi {
 namespace hardware {
 namespace power {
 namespace impl {
-namespace pixel {
+namespace cannon {
 
 using ::android::perfmgr::HintManager;
 
-class PowerExt : public ::aidl::google::hardware::power::extension::pixel::BnPowerExt {
+class PowerExt : public ::aidl::xiaomi::hardware::power::extension::cannon::BnPowerExt {
   public:
     PowerExt(std::shared_ptr<HintManager> hm, std::shared_ptr<DisplayLowPower> dlpw)
         : mHintManager(hm), mDisplayLowPower(dlpw) {}
@@ -48,9 +49,9 @@ class PowerExt : public ::aidl::google::hardware::power::extension::pixel::BnPow
     std::shared_ptr<DisplayLowPower> mDisplayLowPower;
 };
 
-}  // namespace pixel
+}  // namespace cannon
 }  // namespace impl
 }  // namespace power
 }  // namespace hardware
-}  // namespace google
+}  // namespace xiaomi
 }  // namespace aidl

@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2020 The Android Open Source Project
+ *           (C) 2022 StatiXOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,11 +22,11 @@
 #include <android-base/unique_fd.h>
 
 namespace aidl {
-namespace google {
+namespace xiaomi {
 namespace hardware {
 namespace power {
 namespace impl {
-namespace pixel {
+namespace cannon {
 
 class DisplayLowPower {
   public:
@@ -43,9 +44,9 @@ class DisplayLowPower {
     bool mFossStatus;
 };
 
-}  // namespace pixel
+}  // namespace cannon
 }  // namespace impl
 }  // namespace power
 }  // namespace hardware
-}  // namespace google
+}  // namespace xiaomi
 }  // namespace aidl

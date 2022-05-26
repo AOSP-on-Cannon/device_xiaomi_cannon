@@ -1,5 +1,6 @@
 /*
  * Copyright 2021 The Android Open Source Project
+ *           (C) 2022 StatiXOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,11 +31,11 @@
 #include "PowerSessionManager.h"
 
 namespace aidl {
-namespace google {
+namespace xiaomi {
 namespace hardware {
 namespace power {
 namespace impl {
-namespace pixel {
+namespace cannon {
 
 using ::android::base::StringPrintf;
 using std::chrono::duration_cast;
@@ -473,9 +474,9 @@ void PowerHintSession::StaleHandler::handleMessage(const Message &) {
             duration_cast<nanoseconds>(when - now).count(), this, NULL);
 }
 
-}  // namespace pixel
+}  // namespace cannon
 }  // namespace impl
 }  // namespace power
 }  // namespace hardware
-}  // namespace google
+}  // namespace xiaomi
 }  // namespace aidl

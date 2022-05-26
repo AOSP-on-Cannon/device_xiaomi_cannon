@@ -1,5 +1,6 @@
 /*
  * Copyright 2021 The Android Open Source Project
+ *           (C) 2022 StatiXOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,11 +25,11 @@
 #include "PowerSessionManager.h"
 
 namespace aidl {
-namespace google {
+namespace xiaomi {
 namespace hardware {
 namespace power {
 namespace impl {
-namespace pixel {
+namespace cannon {
 
 void PowerSessionManager::setHintManager(std::shared_ptr<HintManager> const &hint_manager) {
     // Only initialize hintmanager instance if hint is supported.
@@ -155,9 +156,9 @@ sp<Looper> PowerHintMonitor::getLooper() {
     return mLooper;
 }
 
-}  // namespace pixel
+}  // namespace cannon
 }  // namespace impl
 }  // namespace power
 }  // namespace hardware
-}  // namespace google
+}  // namespace xiaomi
 }  // namespace aidl

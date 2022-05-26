@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2020 The Android Open Source Project
+ *           (C) 2022 StatiXOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,11 +29,11 @@
 #include "PowerSessionManager.h"
 #include "disp-power/DisplayLowPower.h"
 
-using aidl::google::hardware::power::impl::pixel::DisplayLowPower;
-using aidl::google::hardware::power::impl::pixel::Power;
-using aidl::google::hardware::power::impl::pixel::PowerExt;
-using aidl::google::hardware::power::impl::pixel::PowerHintMonitor;
-using aidl::google::hardware::power::impl::pixel::PowerSessionManager;
+using aidl::xiaomi::hardware::power::impl::cannon::DisplayLowPower;
+using aidl::xiaomi::hardware::power::impl::cannon::Power;
+using aidl::xiaomi::hardware::power::impl::cannon::PowerExt;
+using aidl::xiaomi::hardware::power::impl::cannon::PowerHintMonitor;
+using aidl::xiaomi::hardware::power::impl::cannon::PowerSessionManager;
 using ::android::perfmgr::HintManager;
 
 constexpr std::string_view kPowerHalInitProp("vendor.powerhal.init");
@@ -43,7 +44,7 @@ int main() {
     const std::string config_path =
             "/vendor/etc/" +
             android::base::GetProperty(kConfigProperty.data(), kConfigDefaultFileName.data());
-    LOG(INFO) << "Pixel Power HAL AIDL Service with Extension is starting with config: "
+    LOG(INFO) << "cannon Power HAL AIDL Service with Extension is starting with config: "
               << config_path;
 
     // Parse config but do not start the looper
@@ -70,7 +71,7 @@ int main() {
     const std::string instance = std::string() + Power::descriptor + "/default";
     binder_status_t status = AServiceManager_addService(pw->asBinder().get(), instance.c_str());
     CHECK(status == STATUS_OK);
-    LOG(INFO) << "Pixel Power HAL AIDL Service with Extension is started.";
+    LOG(INFO) << "cannon Power HAL AIDL Service with Extension is started.";
 
     if (::android::base::GetIntProperty("vendor.powerhal.adpf.rate", -1) != -1) {
         PowerHintMonitor::getInstance()->start();
@@ -87,6 +88,6 @@ int main() {
     ABinderProcess_joinThreadPool();
 
     // should not reach
-    LOG(ERROR) << "Pixel Power HAL AIDL Service with Extension just died.";
+    LOG(ERROR) << "cannon Power HAL AIDL Service with Extension just died.";
     return EXIT_FAILURE;
 }
