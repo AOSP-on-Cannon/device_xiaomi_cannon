@@ -1,0 +1,16 @@
+aidl_interface {
+    name: "cannon-power-ext",
+    vendor_available: true,
+    srcs: [
+        "xiaomi/hardware/power/extension/cannon/IPowerExt.aidl",
+    ],
+
+    stability: "vintf",
+
+    backend: {
+        java: {
+            platform_apis: true,
+        },
+    },
+    versions: ["1"],
+}
