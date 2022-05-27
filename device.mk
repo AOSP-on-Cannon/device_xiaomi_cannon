@@ -326,6 +326,9 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.1.vendor \
     android.hardware.power@1.3.vendor
 
+PRODUCT_PACKAGES += \
+    android.hardware.power-service.cannon-libperfmgr
+
 # Props
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/props/device_CN.prop:$(TARGET_COPY_OUT_VENDOR)/etc/device_CN.prop \
