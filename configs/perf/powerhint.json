@@ -469,7 +469,19 @@
       "PowerHint": "INTERACTION",
       "Node": "UclampMin",
       "Duration": 0,
-      "Value": "75"
+      "Value": "50"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "FGUclampMin",
+      "Duration": 0,
+      "Value": "50"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "TAUclampMin",
+      "Duration": 0,
+      "Value": "50"
     },
     {
       "PowerHint": "LAUNCH",
