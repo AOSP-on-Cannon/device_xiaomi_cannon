@@ -42,22 +42,22 @@ using std::chrono::duration_cast;
 using std::chrono::nanoseconds;
 using std::literals::chrono_literals::operator""s;
 
-constexpr char kPowerHalAdpfPidPOver[] = "vendor.powerhal.adpf.pid_p.over";
-constexpr char kPowerHalAdpfPidPUnder[] = "vendor.powerhal.adpf.pid_p.under";
-constexpr char kPowerHalAdpfPidI[] = "vendor.powerhal.adpf.pid_i";
-constexpr char kPowerHalAdpfPidDOver[] = "vendor.powerhal.adpf.pid_d.over";
-constexpr char kPowerHalAdpfPidDUnder[] = "vendor.powerhal.adpf.pid_d.under";
-constexpr char kPowerHalAdpfPidIInit[] = "vendor.powerhal.adpf.pid_i.init";
-constexpr char kPowerHalAdpfPidIHighLimit[] = "vendor.powerhal.adpf.pid_i.high_limit";
-constexpr char kPowerHalAdpfPidILowLimit[] = "vendor.powerhal.adpf.pid_i.low_limit";
-constexpr char kPowerHalAdpfUclampEnable[] = "vendor.powerhal.adpf.uclamp";
-constexpr char kPowerHalAdpfUclampMinGranularity[] = "vendor.powerhal.adpf.uclamp_min.granularity";
-constexpr char kPowerHalAdpfUclampMinHighLimit[] = "vendor.powerhal.adpf.uclamp_min.high_limit";
-constexpr char kPowerHalAdpfUclampMinLowLimit[] = "vendor.powerhal.adpf.uclamp_min.low_limit";
-constexpr char kPowerHalAdpfStaleTimeFactor[] = "vendor.powerhal.adpf.stale_timeout_factor";
-constexpr char kPowerHalAdpfPSamplingWindow[] = "vendor.powerhal.adpf.p.window";
-constexpr char kPowerHalAdpfISamplingWindow[] = "vendor.powerhal.adpf.i.window";
-constexpr char kPowerHalAdpfDSamplingWindow[] = "vendor.powerhal.adpf.d.window";
+constexpr char kPowerHalAdpfPidPOver[] = "vendor.cannon.powerhal.adpf.pid_p.over";
+constexpr char kPowerHalAdpfPidPUnder[] = "vendor.cannon.powerhal.adpf.pid_p.under";
+constexpr char kPowerHalAdpfPidI[] = "vendor.cannon.powerhal.adpf.pid_i";
+constexpr char kPowerHalAdpfPidDOver[] = "vendor.cannon.powerhal.adpf.pid_d.over";
+constexpr char kPowerHalAdpfPidDUnder[] = "vendor.cannon.powerhal.adpf.pid_d.under";
+constexpr char kPowerHalAdpfPidIInit[] = "vendor.cannon.powerhal.adpf.pid_i.init";
+constexpr char kPowerHalAdpfPidIHighLimit[] = "vendor.cannon.powerhal.adpf.pid_i.high_limit";
+constexpr char kPowerHalAdpfPidILowLimit[] = "vendor.cannon.powerhal.adpf.pid_i.low_limit";
+constexpr char kPowerHalAdpfUclampEnable[] = "vendor.cannon.powerhal.adpf.uclamp";
+constexpr char kPowerHalAdpfUclampMinGranularity[] = "vendor.cannon.powerhal.adpf.uclamp_min.granularity";
+constexpr char kPowerHalAdpfUclampMinHighLimit[] = "vendor.cannon.powerhal.adpf.uclamp_min.high_limit";
+constexpr char kPowerHalAdpfUclampMinLowLimit[] = "vendor.cannon.powerhal.adpf.uclamp_min.low_limit";
+constexpr char kPowerHalAdpfStaleTimeFactor[] = "vendor.cannon.powerhal.adpf.stale_timeout_factor";
+constexpr char kPowerHalAdpfPSamplingWindow[] = "vendor.cannon.powerhal.adpf.p.window";
+constexpr char kPowerHalAdpfISamplingWindow[] = "vendor.cannon.powerhal.adpf.i.window";
+constexpr char kPowerHalAdpfDSamplingWindow[] = "vendor.cannon.powerhal.adpf.d.window";
 
 namespace {
 /* there is no glibc or bionic wrapper */

@@ -42,10 +42,10 @@ namespace cannon {
 
 using ::aidl::xiaomi::hardware::power::impl::cannon::PowerHintSession;
 
-constexpr char kPowerHalStateProp[] = "vendor.powerhal.state";
-constexpr char kPowerHalAudioProp[] = "vendor.powerhal.audio";
-constexpr char kPowerHalRenderingProp[] = "vendor.powerhal.rendering";
-constexpr char kPowerHalAdpfRateProp[] = "vendor.powerhal.adpf.rate";
+constexpr char kPowerHalStateProp[] = "vendor.cannon.powerhal.state";
+constexpr char kPowerHalAudioProp[] = "vendor.cannon.powerhal.audio";
+constexpr char kPowerHalRenderingProp[] = "vendor.cannon.powerhal.rendering";
+constexpr char kPowerHalAdpfRateProp[] = "vendor.cannon.powerhal.adpf.rate";
 constexpr int64_t kPowerHalAdpfRateDefault = -1;
 
 Power::Power(std::shared_ptr<HintManager> hm, std::shared_ptr<DisplayLowPower> dlpw)

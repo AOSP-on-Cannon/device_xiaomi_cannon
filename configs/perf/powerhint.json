@@ -354,7 +354,7 @@
     },
     {
       "Name": "PowerHALMainState",
-      "Path": "vendor.powerhal.state",
+      "Path": "vendor.cannon.powerhal.state",
       "Values": [
         "SUSTAINED_PERFORMANCE",
         ""
@@ -363,7 +363,7 @@
     },
     {
       "Name": "PowerHALAudioState",
-      "Path": "vendor.powerhal.audio",
+      "Path": "vendor.cannon.powerhal.audio",
       "Values": [
         "AUDIO_STREAMING_LOW_LATENCY",
         ""
@@ -372,7 +372,7 @@
     },
     {
       "Name": "PowerHALRenderingState",
-      "Path": "vendor.powerhal.rendering",
+      "Path": "vendor.cannon.powerhal.rendering",
       "Values": [
         "EXPENSIVE_RENDERING",
         ""

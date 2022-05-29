@@ -36,8 +36,8 @@ using aidl::xiaomi::hardware::power::impl::cannon::PowerHintMonitor;
 using aidl::xiaomi::hardware::power::impl::cannon::PowerSessionManager;
 using ::android::perfmgr::HintManager;
 
-constexpr std::string_view kPowerHalInitProp("vendor.powerhal.init");
-constexpr std::string_view kConfigProperty("vendor.powerhal.config");
+constexpr std::string_view kPowerHalInitProp("vendor.cannon.powerhal.init");
+constexpr std::string_view kConfigProperty("vendor.cannon.powerhal.config");
 constexpr std::string_view kConfigDefaultFileName("powerhint.json");
 
 int main() {
@@ -73,7 +73,7 @@ int main() {
     CHECK(status == STATUS_OK);
     LOG(INFO) << "cannon Power HAL AIDL Service with Extension is started.";
 
-    if (::android::base::GetIntProperty("vendor.powerhal.adpf.rate", -1) != -1) {
+    if (::android::base::GetIntProperty("vendor.cannon.powerhal.adpf.rate", -1) != -1) {
         PowerHintMonitor::getInstance()->start();
         PowerSessionManager::getInstance()->setHintManager(hm);
     }
