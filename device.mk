@@ -340,6 +340,7 @@ PRODUCT_PACKAGES += \
     CannonAudioOverlay \
     CannonDisplayOverlay \
     CannonFrameworksOverlay \
+    CannonSettingsOverlay \
     CannonSystemUIOverlay \
     CannonTelephonyFrameworkOverlay \
     CannonTelephonyOverlay \
