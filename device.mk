@@ -225,7 +225,7 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl
 
 # Kernel
-TARGET_PREBUILT_KERNEL := device/xiaomi/cannon-kernel/Image.gz-dtb
+TARGET_PREBUILT_KERNEL := device/xiaomi/cannon-kernel/Image.gz
 PRODUCT_COPY_FILES += \
     $(TARGET_PREBUILT_KERNEL):kernel
 
